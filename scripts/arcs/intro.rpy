@@ -33,7 +33,7 @@ label start:
     mc "Oh wow"
 
     python:
-        mcname = renpy.input("What is your name?", length=32)
+        mcname = renpy.input("What is your name?", length=12)
         mcname = mcname.strip()
 
         if not mcname:
