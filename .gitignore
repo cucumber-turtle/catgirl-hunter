@@ -69,4 +69,6 @@ venv.bak/
 /site
 
 # Ren'Py files
-.rpyc
+*.rpyc
+/saves
+/cache
