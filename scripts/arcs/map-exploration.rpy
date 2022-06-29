@@ -17,7 +17,7 @@ init python:
 label mini_explore:
     scene bg_whitespace
     play music "audio/Waltz in G flat major, Op. 70 no. 1.mp3"
-    call screen map_thingy
+    call screen area_map(True)
 
 label navigate_floor1:
     "pressed 1"
@@ -29,4 +29,7 @@ label navigate_floor2:
 
 label navigate_floor3:
     "pressed 3"
+    return
+
+label first_clio:
     return

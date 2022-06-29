@@ -187,6 +187,7 @@ screen quick_menu():
 ## This is so the user can choose which area to go and jump to the appropriate
 ## scene in the game.
 
+## Animation of Bel waving
 image bel_waving:
     "misc/bel_navigation_2.png"
     pause 0.3
@@ -194,7 +195,8 @@ image bel_waving:
     pause 0.3
     repeat
 
-screen map_thingy():
+# Clio is only shown on the first map
+screen area_map(firstMap = False):
     add "backgrounds/bg_whitespace.png"
 
     imagebutton:
@@ -220,13 +222,13 @@ screen map_thingy():
         hover "backgrounds/floor3_hover.png"
         action If(check_floor_permission("floor3"), Jump("navigate_floor3"),
         Notify("You need permission to enter the library!"))
-
-    imagebutton:
-        xpos 900
-        ypos 550
-        idle "misc/clio_navigation_1small.png"
-        hover "misc/clio_navigation_2.png"
-        action NullAction()
+    if firstMap is True:
+        imagebutton:
+            xpos 900
+            ypos 550
+            idle "misc/clio_navigation_1small.png"
+            hover "misc/clio_navigation_2.png"
+            action Jump("first_clio")
 
     add "objects/chair.png" xpos 0 ypos 300
 
