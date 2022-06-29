@@ -187,28 +187,31 @@ screen quick_menu():
 ## This is so the user can choose which area to go and jump to the appropriate
 ## scene in the game.
 screen map_thingy():
-    add "backgrounds/bg_map_navigation.png"
+    add "backgrounds/bg_whitespace.png"
 
     imagebutton:
         xpos 448
         ypos 449
         idle "backgrounds/floor1_idle.png"
         hover "backgrounds/floor1_hover.png"
-        action Jump("navigate_floor1")
+        action If(check_floor_permission("floor1"), Jump("navigate_floor1"),
+        Notify("You need permission to enter the kitchen!"))
 
     imagebutton:
         xpos 431
         ypos 270
         idle "backgrounds/floor2_idle.png"
         hover "backgrounds/floor2_hover.png"
-        action Jump("navigate_floor2")
+        action If(check_floor_permission("floor2"), Jump("navigate_floor2"),
+        Notify("You need permission to enter Roya's room!"))
 
     imagebutton:
         xpos 443
         ypos 54
         idle "backgrounds/floor3_idle.png"
         hover "backgrounds/floor3_hover.png"
-        action Jump("navigate_floor3")
+        action If(check_floor_permission("floor3"), Jump("navigate_floor3"),
+        Notify("You need permission to enter the library!"))
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
