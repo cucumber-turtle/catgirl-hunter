@@ -9,6 +9,12 @@ define mc = Character("[mcname]", color="#f0b190", image="mc")
 # Variable for player's name
 default mcname = "???"
 
+# Images for the characters defined above
+image b excited = "characters/bel_excited.png"
+image b surprised = "characters/bel_surprised.png"
+image b confused = "characters/bel_confused.png"
+image b = "characters/bel.png"
+
 # Side images for the characters defined above
 image side b excited = "icons/bel_side_excited.png"
 image side b surprised = "icons/bel_side_surprised.png"
@@ -26,7 +32,7 @@ label start:
 
     play music "audio/OnWaldenPond.mp3"
 
-    show bel
+    show b
 
     b "You've created a new Ren'Py game."
 
@@ -41,7 +47,7 @@ label start:
 
     mc "My name is [mcname]"
 
-    show bel_excited
+    show b excited
 
     b excited "Once you add a story, pictures, and music, you can release it to the world!"
 
