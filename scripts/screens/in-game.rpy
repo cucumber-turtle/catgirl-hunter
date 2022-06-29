@@ -186,6 +186,14 @@ screen quick_menu():
 ##
 ## This is so the user can choose which area to go and jump to the appropriate
 ## scene in the game.
+
+image bel_waving:
+    "misc/bel_navigation_2.png"
+    pause 0.3
+    "misc/bel_navigation_3.png"
+    pause 0.3
+    repeat
+
 screen map_thingy():
     add "backgrounds/bg_whitespace.png"
 
@@ -212,6 +220,22 @@ screen map_thingy():
         hover "backgrounds/floor3_hover.png"
         action If(check_floor_permission("floor3"), Jump("navigate_floor3"),
         Notify("You need permission to enter the library!"))
+
+    imagebutton:
+        xpos 900
+        ypos 550
+        idle "misc/clio_navigation_1small.png"
+        hover "misc/clio_navigation_2.png"
+        action NullAction()
+
+    add "objects/chair.png" xpos 0 ypos 300
+
+    imagebutton:
+        xpos 0
+        ypos 300
+        idle "misc/bel_navigation_1.png"
+        hover "bel_waving"
+        action NullAction()
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
