@@ -32,11 +32,12 @@ label start:
 
     play music "audio/OnWaldenPond.mp3"
 
-    show b
+    mc "...Where am I?"
 
-    b "You've created a new Ren'Py game."
+    show b excited
+    b "Welcome to my home!"
 
-    mc "Oh wow"
+    show b confused
 
     python:
         mcname = renpy.input("What is your name?", length=12)
@@ -48,7 +49,39 @@ label start:
     mc "My name is [mcname]"
 
     show b excited
+    b excited "What a lovely name! I am Bel."
 
-    b excited "Once you add a story, pictures, and music, you can release it to the world!"
+    show b
+    b "Well now Coyote, since you’ve arrived, I’d like to ask you for a favour!"
+
+    menu:
+        "Why should I?":
+            show b confused
+            b confused "Does there need to be a reason why?"
+            b confused "You obviously just want to be entertained."
+            show b
+        "Sure, I guess...":
+            pass
+
+    b "You are here to hunt cats. More specifically, I want you to catch and
+    collect cat girls."
+
+    show b excited
+    b excited "We don’t have too many here at Asylum, but you won’t be disappointed..."
+
+    show b
+    b "Do you have any questions, Coyote?"
+
+    menu:
+        "Why do you call me coyote?":
+            show b excited
+            b excited "Because you’re hunting cats, obviously!"
+        "Why is this place so empty?":
+            show b confused
+            b confused "Well, because I like it this way.
+            Is there anything wrong with that?"
+
+    show b excited
+    b excited "Alright now, off you go. Enjoy yourself!"
 
     jump mini_explore
