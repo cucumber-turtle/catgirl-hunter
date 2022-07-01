@@ -197,7 +197,7 @@ image bel_waving:
 
 # Clio is only shown on the first map
 screen area_map(firstMap = False):
-    add "backgrounds/bg_perspective.png"
+    add "backgrounds/bg_perspective2.png"
 
     imagebutton:
         xpos 448
@@ -230,11 +230,11 @@ screen area_map(firstMap = False):
             hover "misc/clio_navigation_2.png"
             action Jump("first_clio")
 
-    add "objects/chair.png" xpos 0 ypos 300
+    add "objects/chair.png" xpos 200 ypos 580
 
     imagebutton:
-        xpos 0
-        ypos 300
+        xpos 200
+        ypos 580
         idle "misc/bel_navigation_1.png"
         hover "bel_waving"
         action NullAction()
