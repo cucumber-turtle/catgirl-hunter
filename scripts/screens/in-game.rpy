@@ -225,7 +225,7 @@ screen area_map(firstMap = False):
     if firstMap is True:
         imagebutton:
             xpos 900
-            ypos 550
+            ypos 590
             idle "misc/clio_navigation_1small.png"
             hover "misc/clio_navigation_2.png"
             action Jump("first_clio")

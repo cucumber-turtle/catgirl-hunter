@@ -30,6 +30,3 @@ label navigate_floor2:
 label navigate_floor3:
     "pressed 3"
     return
-
-label first_clio:
-    return
