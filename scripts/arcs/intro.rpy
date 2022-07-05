@@ -84,4 +84,4 @@ label start:
     show b excited
     b excited "Alright now, off you go. Enjoy yourself!"
 
-    jump mini_explore
+    jump first_mini_explore

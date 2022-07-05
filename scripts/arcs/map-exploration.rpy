@@ -14,10 +14,12 @@ init python:
         elif floor is "floor3":
             return library_perm
 
-label mini_explore:
+label first_mini_explore:
     scene bg_whitespace
     play music "audio/Waltz in G flat major, Op. 70 no. 1.mp3"
     call screen area_map(True)
+
+# Placeholders until I need to use them
 
 label navigate_floor1:
     "pressed 1"
