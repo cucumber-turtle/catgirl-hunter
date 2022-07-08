@@ -78,4 +78,4 @@ label first_clio:
     return
 
 label card_game_clio:
-    "test test"
+    call screen game_clicker(None)

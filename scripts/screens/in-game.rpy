@@ -222,6 +222,7 @@ screen area_map(firstMap = False):
         hover "backgrounds/floor3_hover.png"
         action If(check_floor_permission("floor3"), Jump("navigate_floor3"),
         Notify("You need permission to enter the library!"))
+
     if firstMap is True:
         imagebutton:
             xpos 900
@@ -239,6 +240,13 @@ screen area_map(firstMap = False):
         hover "bel_waving"
         action NullAction()
 
+# Clicker game
+screen game_clicker(imageName):
+    add "backgrounds/bg_whitespace.png"
+
+    hbox:
+        textbutton "Win" action Call("clio_win_1")
+        textbutton "Lose" action Call("clio_lose_1")
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
