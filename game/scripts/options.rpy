@@ -23,6 +23,14 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+Catgirl Hunter is a small visual novel project. Game development was started in June 2022.
+Art is made by cucumelon__ on instagram, and code is written by cucumber-turtle on Github.
+
+Music used is under CC licenses.
+Cop a Feel by Jason Shaw CC BY 4.0 https://audionautix.com/creative-commons-music
+On Walden Pond by Jason Shaw CC BY 4.0
+Spacedust by airtone CC BY 3.0
+Waltz in G flat major, Op. 70 no. 1 CC0
 """)
 
 
