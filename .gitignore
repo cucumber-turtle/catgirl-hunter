@@ -72,3 +72,7 @@ venv.bak/
 *.rpyc
 saves/
 cache/
+log.txt
+
+# IDE settings
+/.vscode
