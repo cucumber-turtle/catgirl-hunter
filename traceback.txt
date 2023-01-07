@@ -1,0 +1,32 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/scripts/arcs/first-arc.rpy", line 81, in script call
+    call screen game_clicker(None)
+  File "game/scripts/arcs/first-arc.rpy", line 81, in script call
+    call screen game_clicker(None)
+ScriptError: could not find label 'clio_lose_1'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "C:\Users\happy\Documents\Programs for coding\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
+    renpy.main.main()
+  File "C:\Users\happy\Documents\Programs for coding\renpy-8.0.3-sdk\renpy\main.py", line 660, in main
+    run(restart)
+  File "C:\Users\happy\Documents\Programs for coding\renpy-8.0.3-sdk\renpy\main.py", line 146, in run
+    renpy.execution.run_context(True)
+  File "C:\Users\happy\Documents\Programs for coding\renpy-8.0.3-sdk\renpy\execution.py", line 938, in run_context
+    context.run()
+  File "game/scripts/arcs/first-arc.rpy", line 81, in script call
+    call screen game_clicker(None)
+  File "game/scripts/arcs/first-arc.rpy", line 81, in script call
+    call screen game_clicker(None)
+  File "C:\Users\happy\Documents\Programs for coding\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'clio_lose_1'.
+
+Windows-10-10.0.22621 AMD64
+Ren'Py 8.0.3.22090809
+Catgirl Hunter 1.0
+Thu Jan  5 22:28:43 2023

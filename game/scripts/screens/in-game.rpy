@@ -195,7 +195,8 @@ image bel_waving:
     pause 0.3
     repeat
 
-# Clio is only shown on the first map
+## The map for navigating between different areas in the game
+## Navigating to places requires permission which the user gets from talking to characters
 screen area_map(firstMap = False):
     add "backgrounds/bg_perspective2.png"
 
@@ -223,6 +224,8 @@ screen area_map(firstMap = False):
         action If(check_floor_permission("floor3"), Jump("navigate_floor3"),
         Notify("You need permission to enter the library!"))
 
+    # If the map is shown at the start of the game
+    # Clio is shown waiting
     if firstMap is True:
         imagebutton:
             xpos 900
@@ -238,7 +241,7 @@ screen area_map(firstMap = False):
         ypos 580
         idle "misc/bel_navigation_1.png"
         hover "bel_waving"
-        action NullAction()
+        action NullAction() # Clicking Bel should have no effect
 
 # Clicker game
 screen game_clicker(imageName):
