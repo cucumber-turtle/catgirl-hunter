@@ -44,7 +44,7 @@ label start:
         mcname = mcname.strip()
 
         if not mcname:
-             mcname = "Doggo"
+            mcname = "Doggo"
 
     mc "My name is [mcname]"
 
