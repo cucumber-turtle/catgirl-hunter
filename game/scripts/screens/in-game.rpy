@@ -247,6 +247,59 @@ screen area_map(firstMap = False):
 screen game_clicker(imageName):
     add "backgrounds/bg_whitespace.png"
 
+    python:
+        back = Card("back", [-1,-1], "none")
+        emperor1 = Card("emperor", [0,0], "none")
+        emperor2 = Card("emperor", [1,0], "none")
+        priestess1 = Card("high_priestess", [0,1], "none")
+        priestess2 = Card("high_priestess", [0,2], "none")
+        moon1 = Card("moon", [0,3], "none")
+        moon2 = Card("moon", [1,1], "none")
+        devil1 = Card("devil", [1,2], "none")
+        devil2 = Card("devil", [1,3], "none")
+
+    grid 4 2:
+        # An image button for every card
+        # First row
+        imagebutton:
+            idle back.image # Back of card
+            hover emperor1.image # Front of card
+            action NullAction() # Clicking card should show front of card and match with other selected cards
+        imagebutton:
+            idle back.image
+            hover emperor1.image
+            action NullAction()
+        imagebutton:
+            idle back.image
+            hover emperor1.image
+            action NullAction()
+        imagebutton:
+            idle back.image
+            hover emperor1.image
+            action NullAction()
+        # Second row
+        imagebutton:
+            idle back.image
+            hover emperor1.image
+            action NullAction()
+        imagebutton:
+            idle back.image
+            hover emperor1.image
+            action NullAction()
+        imagebutton:
+            idle back.image
+            hover emperor1.image
+            action NullAction()
+        imagebutton:
+            idle back.image
+            hover emperor1.image
+            action NullAction()
+        
+        xmargin 250
+        ymargin 60
+        spacing 50
+
+    # REMOVE THIS AFTER FINISHING CODE FOR MINIGAME
     hbox:
         textbutton "Win" action Call("clio_win_1")
         textbutton "Lose" action Call("clio_lose_1")
@@ -255,6 +308,13 @@ screen game_clicker(imageName):
 ## the player has not explicitly hidden the interface.
 init python:
     config.overlay_screens.append("quick_menu")
+
+    class Card:
+        def __init__(self, card_type, position, transformation):
+            self.type = card_type
+            self.position = position
+            self.transformation = transformation
+            self.image = f"minigame/{self.type}.png"
 
 default quick_menu = True
 
